@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Sentence dictionary online - Good sentence examples for every word!</title>
+<meta name="description" content="Sentencedict.com is a online sentence dictionary, on which you can find good sentence examples for almost every word. We try our best to collect and create good sentences and wish you can make progress day by day!"/>
+<link href="/common/dedecms.css" rel="stylesheet" media="screen" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7200850114163593",
+          enable_page_level_ads: true
+     });
+</script>
+</head>
+<body>
+
+<div class="pageDiv" style="border: 0px solid blue;">
+<script>
+function trim(str){
+　return str.replace(/(^\s*)|(\s*$)/g,"");
+}
+var strDefault="Please input any word...";
+function queryCheck(){
+	if(formQuery.vagueSearch.checked){
+		///formQuery.q.value=encodeURI(formQuery.word.value+" site:sentencedict.com");
+		formQuery.q.value=formQuery.word.value+" site:sentencedict.com";
+		var temp=formQuery.action;
+		formQuery.action="https://www.google.com/search";
+		formQuery.method="get";
+		formQuery.target="_blank";
+		//为了wo参数不提交
+		formQuery.word.disabled=true;
+		formQuery.submit();
+		formQuery.action=temp;
+		formQuery.method="post";
+		formQuery.target="_self";
+		formQuery.word.disabled=false;
+	}else{
+		formQuery.word.value=trim(formQuery.word.value);
+		var word=formQuery.word.value;
+		if(word==""||word==strDefault){
+			alert("Please input any word!");return;
+		}
+		formQuery.submit();
+	}
+	var temp="1";
+	if(!formQuery.directGo.checked){
+		temp="0";
+	}
+	setCookie("directGo",temp,12);
+	var temp="1";
+	if(!formQuery.vagueSearch.checked){
+		temp="0";
+	}
+	setCookie("vagueSearch",temp,12);
+}
+function getCookie(name)
+{
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg))
+		return (arr[2]);
+	else
+		return null;
+}
+function setCookie(cookiename,cookievalue,hours){
+	var date=new Date();
+	date.setTime(date.getTime()+Number(hours)*3600*1000);
+	document.cookie=cookiename+"="+cookievalue+";path=/;expires="+date.toGMTString();
+}
+</script>
+<div class="header">
+<table width="100%" style="margin-bottom:4px;font-size:14px;" height=65 cellspacing=0 border=0 >
+<tr>
+    <td width=100 valign="bottom" style="padding:0px;">
+      <a href="/">
+      <img src="/images/logo.jpg" style="vertical-align:bottom;margin-bottom:1px;border:0px solid #dddddd" alt="Sentencedict.com" height=50 width=150>
+      </a>
+    </td>
+    <td valign="bottom">
+<form method="post" style="margin:2px;margin-left:10px;" name="formQuery" action="/wordQueryDo.php">
+<input type='text' style='display:none;'/>
+<input type="hidden" name="q" value="">
+<input type="text" name="word" maxLength=100 style="float:left;margin-bottom:3px;width:360px;height:28px;line-height:26px;padding-left:6px;font-size:16px;border:1px solid #3D7A01;border-top:1px solid #67CD01;border-left:1px solid #67CD01;color:gray;" 
+size=20 value="Please input any word..." onfocus="if(this.value==strDefault){this.value='';this.style.color='black';}" onblur="if(this.value==''){this.value=strDefault;this.style.color='gray';}" onkeydown="if(event.keyCode==13){queryCheck();}"/>
+<input type="button" style="float:left;width:70px;height:30px;margin-left:4px;cursor:pointer;font-size:14px;" onclick="queryCheck()" value="Search"/><div style="margin-top:10px;float:left;">&nbsp;<input type="checkbox" name="directGo" style="margin-right:2px;margin-bottom:2px;margin-left:2px;" value="1" checked/>Directly to word page&nbsp;<span title="use vague search provided by google" style=""><input type="checkbox" name="vagueSearch" style="margin-right:2px;margin-bottom:2px;" value="1" onclick="if(this.checked){formQuery.directGo.disabled=true;}else{formQuery.directGo.disabled=false;}"/>Vague search(google)</span>
+</div>
+</form>
+</td>
+</tr>
+</table>
+<script>
+var temp=getCookie("directGo");
+//此情况修改directGo的checked状态
+if(temp=="0"){
+  formQuery.directGo.checked=false;
+}
+var temp=getCookie("vagueSearch");
+//此情况修改vagueSearch的checked状态
+if(temp=="1"){
+  formQuery.vagueSearch.checked=true;
+}
+</script>
+<div class="module blue mT10 wrapper w963">
+<div id="navMenu" style="background-color:#199507;border:0px solid red;background-image:url('/images/green_skin.png');background-position:0 -72px;background-repeat:repeat-x;">
+<ul>
+	<li><a href="/"><span>Home</span></a></li>
+	<li><a href="/top1000/"><span>Top1000 word</span></a></li>
+	<li><a href="/top5000/"><span>Top5000 word</span></a></li>
+	<li><a href="/phrase/"><span>Phrases</span></a></li>
+	<!--<li><a href="/conjunction/"><span>Conjunction</span></a></li>-->
+	<li><a href="/game/"><span>Game</span></a></li>
+	<li><a href="/getSImage.php"><span>Sentence into pic</span></a></li>
+	<li><a href="/feedback.php"><span>Feedback</span></a></li>
+	<li><a href="/donate.php"><span>Donate</span></a></li>
+</ul>
+</div><!-- //navMenu -->
+
+</div><!-- //module blue... -->
+<div>
+</div>
+</div><div class="place" style="color:#428c5b;margin-top:8px;margin-bottom:0px;height:26px;line-height:26px;">
+	<a href="/">Home</a>(all the words)
+</div><!--place-->
+
+<div id="div_main_left" style="margin-top:6px;border:0px solid blue;">
+<div id="div_content" style="border-bottom:1px solid #aaaaaa;">
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/lgb.html" target="_blank">lgb in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-24</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/protection system.html" target="_blank">protection system in a sentence</a>&nbsp;(76)
+		<span style="color:#428c5b">04-24</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/couplant.html" target="_blank">couplant in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-24</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/factor viii.html" target="_blank">factor viii in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">04-23</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/shot blasting.html" target="_blank">shot blasting in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-23</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/phased array.html" target="_blank">phased array in a sentence</a>&nbsp;(70)
+		<span style="color:#428c5b">04-23</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/nonfarm payrolls.html" target="_blank">nonfarm payrolls in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">04-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/compositeness.html" target="_blank">compositeness in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/alcibiades.html" target="_blank">alcibiades in a sentence</a>&nbsp;(22)
+		<span style="color:#428c5b">04-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/CFV.html" target="_blank">CFV in a sentence</a>&nbsp;(9)
+		<span style="color:#428c5b">04-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/hardware control.html" target="_blank">hardware control in a sentence</a>&nbsp;(22)
+		<span style="color:#428c5b">04-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/bonhoeffer.html" target="_blank">bonhoeffer in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">04-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/dietrich.html" target="_blank">dietrich in a sentence</a>&nbsp;(26)
+		<span style="color:#428c5b">04-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/minesweeping.html" target="_blank">minesweeping in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-20</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/data-oriented.html" target="_blank">data-oriented in a sentence</a>&nbsp;(23)
+		<span style="color:#428c5b">04-20</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/stone-ground.html" target="_blank">stone-ground in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stoloniferous.html" target="_blank">stoloniferous in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stockwork.html" target="_blank">stockwork in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/schizophreniform.html" target="_blank">schizophreniform in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/sterna.html" target="_blank">sterna in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/sterigma.html" target="_blank">sterigma in a sentence</a>&nbsp;(8)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stereotaxis.html" target="_blank">stereotaxis in a sentence</a>&nbsp;(8)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stereoselectivity.html" target="_blank">stereoselectivity in a sentence</a>&nbsp;(23)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stereophotogrammetry.html" target="_blank">stereophotogrammetry in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stereoisomerism.html" target="_blank">stereoisomerism in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stereochemical.html" target="_blank">stereochemical in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/sterculiaceae.html" target="_blank">sterculiaceae in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stercoral.html" target="_blank">stercoral in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/cushing's syndrome.html" target="_blank">cushing's syndrome in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stephenson.html" target="_blank">stephenson in a sentence</a>&nbsp;(34)
+		<span style="color:#428c5b">04-05</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/decoloration.html" target="_blank">decoloration in a sentence</a>&nbsp;(14)
+		<span style="color:#428c5b">03-29</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/strindberg.html" target="_blank">strindberg in a sentence</a>&nbsp;(16)
+		<span style="color:#428c5b">03-29</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/class of service.html" target="_blank">class of service in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">03-29</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/frequency response.html" target="_blank">frequency response in a sentence</a>&nbsp;(137)
+		<span style="color:#428c5b">03-29</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/main power.html" target="_blank">main power in a sentence</a>&nbsp;(30)
+		<span style="color:#428c5b">03-29</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/ethmoidal.html" target="_blank">ethmoidal in a sentence</a>&nbsp;(33)
+		<span style="color:#428c5b">03-28</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/knowledge representation.html" target="_blank">knowledge representation in a sentence</a>&nbsp;(85)
+		<span style="color:#428c5b">03-28</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/beveling.html" target="_blank">beveling in a sentence</a>&nbsp;(29)
+		<span style="color:#428c5b">03-28</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/jotun.html" target="_blank">jotun in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">03-28</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/guinea-bissau.html" target="_blank">guinea-bissau in a sentence</a>&nbsp;(16)
+		<span style="color:#428c5b">03-27</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/lignification.html" target="_blank">lignification in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">03-27</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/people-to-people.html" target="_blank">people-to-people in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">03-26</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/relapsing fever.html" target="_blank">relapsing fever in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">03-26</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/falun gong.html" target="_blank">falun gong in a sentence</a>&nbsp;(16)
+		<span style="color:#428c5b">03-24</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/uniform code.html" target="_blank">uniform code in a sentence</a>&nbsp;(14)
+		<span style="color:#428c5b">03-24</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+<div style="clear:both"></div><!--让换行符下来-->
+
+<div style="clear:both;margin-top:5px;margin-bottom:5px;margin-left:15px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 970_90_20170421 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-7200850114163593"
+     data-ad-slot="5287223468"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/laryngocele.html" target="_blank">laryngocele in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-20</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/AFTS.html" target="_blank">AFTS in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">04-19</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/between the teeth.html" target="_blank">between the teeth in a sentence</a>&nbsp;(14+1)
+		<span style="color:#428c5b">04-18</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/wilkinson.html" target="_blank">wilkinson in a sentence</a>&nbsp;(92+1)
+		<span style="color:#428c5b">04-18</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/Ac..html" target="_blank">Ac. in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">04-17</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/sinfonia.html" target="_blank">sinfonia in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-17</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/futures prices.html" target="_blank">futures prices in a sentence</a>&nbsp;(34)
+		<span style="color:#428c5b">04-17</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/liquefactive.html" target="_blank">liquefactive in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-16</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/after blow.html" target="_blank">after blow in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-16</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/photosensitizer.html" target="_blank">photosensitizer in a sentence</a>&nbsp;(23)
+		<span style="color:#428c5b">04-16</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/thyratron.html" target="_blank">thyratron in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">04-16</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/copley.html" target="_blank">copley in a sentence</a>&nbsp;(25)
+		<span style="color:#428c5b">04-16</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/symonds.html" target="_blank">symonds in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">04-15</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/interlamellar.html" target="_blank">interlamellar in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">04-15</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/multiprocess.html" target="_blank">multiprocess in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">04-15</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/real estate loan.html" target="_blank">real estate loan in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">04-14</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/electrolytic solution.html" target="_blank">electrolytic solution in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-14</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/Mitt..html" target="_blank">Mitt. in a sentence</a>&nbsp;(24)
+		<span style="color:#428c5b">04-13</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/data organization.html" target="_blank">data organization in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">04-12</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/financial group.html" target="_blank">financial group in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">04-12</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/zygomatic arch.html" target="_blank">zygomatic arch in a sentence</a>&nbsp;(15)
+		<span style="color:#428c5b">04-11</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/unstoppered.html" target="_blank">unstoppered in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/jemaah islamiyah.html" target="_blank">jemaah islamiyah in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/valparaiso.html" target="_blank">valparaiso in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/uppsala.html" target="_blank">uppsala in a sentence</a>&nbsp;(25)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/updike.html" target="_blank">updike in a sentence</a>&nbsp;(25)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/time of completion.html" target="_blank">time of completion in a sentence</a>&nbsp;(18)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/st. jude.html" target="_blank">st. jude in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">04-10</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/jacketing.html" target="_blank">jacketing in a sentence</a>&nbsp;(34)
+		<span style="color:#428c5b">04-09</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/tyrol.html" target="_blank">tyrol in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-08</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/hepatogastric.html" target="_blank">hepatogastric in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/grand national.html" target="_blank">grand national in a sentence</a>&nbsp;(28)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stored-program.html" target="_blank">stored-program in a sentence</a>&nbsp;(8)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/decompaction.html" target="_blank">decompaction in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-06</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stoppard.html" target="_blank">stoppard in a sentence</a>&nbsp;(9)
+		<span style="color:#428c5b">04-06</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/stengel.html" target="_blank">stengel in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stendhal.html" target="_blank">stendhal in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steinway.html" target="_blank">steinway in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steinman.html" target="_blank">steinman in a sentence</a>&nbsp;(22)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steinem.html" target="_blank">steinem in a sentence</a>&nbsp;(21+1)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steinberg.html" target="_blank">steinberg in a sentence</a>&nbsp;(27)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steichen.html" target="_blank">steichen in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steffens.html" target="_blank">steffens in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steerability.html" target="_blank">steerability in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steatolysis.html" target="_blank">steatolysis in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stearyl.html" target="_blank">stearyl in a sentence</a>&nbsp;(9)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stearoyl.html" target="_blank">stearoyl in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/steam-heated.html" target="_blank">steam-heated in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stases.html" target="_blank">stases in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/staphyloma.html" target="_blank">staphyloma in a sentence</a>&nbsp;(14)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stannate.html" target="_blank">stannate in a sentence</a>&nbsp;(9)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/stachydrine.html" target="_blank">stachydrine in a sentence</a>&nbsp;(15)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/sspe.html" target="_blank">sspe in a sentence</a>&nbsp;(16)
+		<span style="color:#428c5b">04-05</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/advanced technique.html" target="_blank">advanced technique in a sentence</a>&nbsp;(29)
+		<span style="color:#428c5b">04-04</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/financial result.html" target="_blank">financial result in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">04-04</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/official receipts.html" target="_blank">official receipts in a sentence</a>&nbsp;(15)
+		<span style="color:#428c5b">04-04</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/direct relation.html" target="_blank">direct relation in a sentence</a>&nbsp;(30+1)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/light time.html" target="_blank">light time in a sentence</a>&nbsp;(14)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/photochromism.html" target="_blank">photochromism in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/antoninus.html" target="_blank">antoninus in a sentence</a>&nbsp;(9)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/air tightness.html" target="_blank">air tightness in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/Huffman.html" target="_blank">Huffman in a sentence</a>&nbsp;(29)
+		<span style="color:#428c5b">04-03</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/live line.html" target="_blank">live line in a sentence</a>&nbsp;(12)
+		<span style="color:#428c5b">04-02</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/acephate.html" target="_blank">acephate in a sentence</a>&nbsp;(13)
+		<span style="color:#428c5b">04-02</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/electrolyser.html" target="_blank">electrolyser in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">04-02</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/in silhouette.html" target="_blank">in silhouette in a sentence</a>&nbsp;(17+2)
+		<span style="color:#428c5b">04-01</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/isobutane.html" target="_blank">isobutane in a sentence</a>&nbsp;(16)
+		<span style="color:#428c5b">03-31</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/cellular automaton.html" target="_blank">cellular automaton in a sentence</a>&nbsp;(27)
+		<span style="color:#428c5b">03-30</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/of right.html" target="_blank">of right in a sentence</a>&nbsp;(230+1)
+		<span style="color:#428c5b">03-30</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/export permit.html" target="_blank">export permit in a sentence</a>&nbsp;(14)
+		<span style="color:#428c5b">03-30</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+
+<div id="div_left" style="width: 33%; float: left; border: 0px solid blue;">
+<div class="commend mt1" style="margin-top: 0px;">
+<dl class="tbox light" style="margin-bottom:0px;border-bottom:0px solid #DADADA;">
+	<dd class="light" style="border: 0px solid blue;">
+	<ul class="c1 ico2" style="padding: 0px;">
+			<li class="dotline"><a style="color: #256EB1;" href="/DMPA.html" target="_blank">DMPA in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">03-24</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/ore processing.html" target="_blank">ore processing in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">03-23</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/a month or so.html" target="_blank">a month or so in a sentence</a>&nbsp;(24+1)
+		<span style="color:#428c5b">03-23</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/punica.html" target="_blank">punica in a sentence</a>&nbsp;(11)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pumpkinseed.html" target="_blank">pumpkinseed in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pulvinar.html" target="_blank">pulvinar in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pulsatilla.html" target="_blank">pulsatilla in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pulex.html" target="_blank">pulex in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/puglia.html" target="_blank">puglia in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pueraria.html" target="_blank">pueraria in a sentence</a>&nbsp;(34)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/puccinia.html" target="_blank">puccinia in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/public-key.html" target="_blank">public-key in a sentence</a>&nbsp;(60)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/PTU.html" target="_blank">PTU in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/ptotic.html" target="_blank">ptotic in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pterygopalatine.html" target="_blank">pterygopalatine in a sentence</a>&nbsp;(23)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/county courthouse.html" target="_blank">county courthouse in a sentence</a>&nbsp;(20)
+		<span style="color:#428c5b">03-22</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pterocarya.html" target="_blank">pterocarya in a sentence</a>&nbsp;(8)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pterocarpus.html" target="_blank">pterocarpus in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pteridium.html" target="_blank">pteridium in a sentence</a>&nbsp;(8)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/psychologism.html" target="_blank">psychologism in a sentence</a>&nbsp;(7)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/PSTN.html" target="_blank">PSTN in a sentence</a>&nbsp;(37)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/psoralen.html" target="_blank">psoralen in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/psoralea.html" target="_blank">psoralea in a sentence</a>&nbsp;(22)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/PSK.html" target="_blank">PSK in a sentence</a>&nbsp;(15)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/psilomelane.html" target="_blank">psilomelane in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/psidium.html" target="_blank">psidium in a sentence</a>&nbsp;(17)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudotumor.html" target="_blank">pseudotumor in a sentence</a>&nbsp;(26)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudotuberculosis.html" target="_blank">pseudotuberculosis in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudorabies.html" target="_blank">pseudorabies in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudoplastic.html" target="_blank">pseudoplastic in a sentence</a>&nbsp;(19)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudomonad.html" target="_blank">pseudomonad in a sentence</a>&nbsp;(5)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudomembranous.html" target="_blank">pseudomembranous in a sentence</a>&nbsp;(6)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/pseudobulbar.html" target="_blank">pseudobulbar in a sentence</a>&nbsp;(21)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/cruciferae.html" target="_blank">cruciferae in a sentence</a>&nbsp;(22)
+		<span style="color:#428c5b">03-21</span></li>
+				<li class="dotline"><a style="color: #256EB1;" href="/rolling contact.html" target="_blank">rolling contact in a sentence</a>&nbsp;(10)
+		<span style="color:#428c5b">03-21</span></li>
+			</ul>
+	</dd>
+</dl>
+</div>
+</div>
+<!--div_left  -->
+
+<div style="clear:both"></div><!--让换行符下来-->
+<div id="ads4" style="padding-top:0px;">
+</div>
+</div><!--div_content-->
+
+<script>
+	function goPage(pagePre,action){
+		var goPageNo=parseInt(document.getElementById("goPageNo").value,10);
+		var pageCountNo=parseInt(document.getElementById("pageCountNo").value,10);
+		///alert(goPageNo);
+		///alert(pageCountNo);
+		//这样确实ok啊,把输入为空等情况都剔除了.白名单制度.
+		if((goPageNo<=pageCountNo) && (goPageNo>=1)){
+		}else{
+			alert("Please input the correct page number!");
+			return;
+		}
+		var href1;
+		if(goPageNo==1){
+			href1=pagePre;
+			if(action=="word"){
+				href1="/";
+			}
+		}else{
+			href1=pagePre+"list_"+goPageNo+".html";
+		}
+		window.location.href=href1;
+	}
+</script>
+<div style="text-align:center;margin-top:10px;">
+	  Total&nbsp;104675, 150&nbsp;Per page&nbsp;
+    1/698&nbsp;
+           <a href="/"><span style="margin-right:2px;">«</span>first</a>&nbsp;
+           <a href="/word/list_2.html">next<span style="margin-left:2px;">›</span></a>&nbsp;
+           <a href="/word/list_698.html">last<span style="margin-left:2px;">»</span></a>&nbsp;
+          <input type="hidden" id="pageCountNo" value="698" />
+      goto<input style="margin:auto 2px;" type="text" size=3 id="goPageNo" value="1"  onkeydown="if(event.keyCode==13){goPage('/word/','word');}" /><input type="button" style="margin-left:3px;cursor:hand;" value="ok" onclick="goPage('/word/','word');" />
+    </div>
+</div><!-- div_main_left --> 
+<!--
+<div id="ads2" style="margin-top:8px;width:18%;height:1120px;float:left;border:0px solid blue;">
+</div>--><!-- div_main_right,ads2-->
+<!--外部文件,先显示图片,再广告,再其它-->
+<div style="padding-top:2px;clear:both;"></">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 970_90_20170421 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-7200850114163593"
+     data-ad-slot="5287223468"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="footer w960 center mt1 clear">
+<div class="footer_body">
+
+<div class="copyright">Copyright © 2016 sentencedict.com All Rights Reserved Contact:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d0f0b0e09090a08080e0d7d4c4c135e5250">[email&#160;protected]</a>
+</div>
+
+</div><!-- footer_body -->
+</div><!--footer w960 -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97689481-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-578e31c97244699a"></script></div><!-- pageDiv -->
+</body>
+</html>
