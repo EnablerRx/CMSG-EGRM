@@ -10,7 +10,7 @@ test_data = pickle.load(open("sen_att_pos_01.pik", 'rb'), encoding='iso-8859-1')
 roberta = getRoberta()
 
 
-resultlist = [] # 结果列表
+resultlist = [] 
 filename = 'result_CMSG_woI.json'
 isNew = True # first generated item
 for index in range(len(test_data['des_sen'])): 
